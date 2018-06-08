@@ -1,0 +1,33 @@
+//
+//public static void collector(int[] array, int min, int max) {
+////  Numbers are all between 1 and 100
+////  Will have an array with 100 elements
+////  Will register the number of times each value is found in the counting array
+////  then we can list the array from the counting array.
+//        int[] collector = new int[(max-min) + 1];
+//        for(int i=0;i<collector.length;i++){
+//        collector[i]=0;
+//        }
+//        for(int i=0; i<array.length; i++){
+//        collector[(array[i]-min)]++; // set the index to increment with each value.
+//        }
+//        int index=0; // index 0 = the number of values of 1, index 1 is the # of values of 2, etc.
+//        int count = 0;
+//        int j=0;
+//
+//        for (int i=min;i<=max;i++){
+//        while(collector[i-min]>0){
+//        array[j++] = i;
+//        collector[i-min]--;
+//        }
+//        }
+//
+////        while(i<array.length && j<collector.length){
+////            while(collector[j++]==0);
+////            for(int a=0;a<collector[j-1];a++) {
+////                array[i++] = j;
+////            }
+////
+////        }
+//
+//        }

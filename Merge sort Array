@@ -1,0 +1,89 @@
+// not here yet ;-)
+//public static int factor(int base, int exp){
+//        System.out.println("    base: " + base + "exponent: " + exp);
+//        if(exp<1)return 1;
+//        return (base*factor(base, exp-1));
+//        }
+//
+//public static void mergeSort(int[] array, int start, int end){
+//        iterateCount++;
+////  System.out.println("Start index: " + start + "\n       End: " + end);
+//        if(end-start < 2) return;
+////  printArray(array);
+//
+//        int mid = (start+end)/2;
+//
+//        mergeSort(array, start, mid);
+//        mergeSort(array, mid, end);
+//        merge(array, start, mid, end);
+//        }
+//
+//public static void merge(int[] array, int start, int mid, int end) {
+//// the mid point is my length for array 1 and the end-mid is my length for array 2.  I'll need to compare these
+////  element to element when merging together.  Break when the condition is met, otherwise, continue in the loop
+//
+////   if the left 'mid' element is smaller than the rigt beginning element, we are done!
+//        if (array[mid - 1] <= array[mid]) return;
+//
+//        int i = start;
+//        int j = mid;
+//        int tempindex = 0;
+//
+//        int[] tempArray = new int[end - start];
+//        while ((i < mid) && (j < end)) {
+//        iterateCount++;
+//        printArray(tempArray);
+//        System.out.println("Array-i: " + array[i] + "\nArray-j: " +array[j] );
+//        tempArray[tempindex++] = array[i] <= array[j] ? array[i++] : array[j++];
+//        printArray(tempArray);
+//        }
+//        System.arraycopy(array, i, array, start + tempindex, mid-i);
+//        printArray(tempArray);
+//
+//        System.arraycopy(tempArray, 0, array, start, tempindex);
+//        printArray(array);
+//
+//        }
+//
+
+// REVERSE ORDER
+
+//public static void mergeSort(int[] array, int start, int end){
+//        iterateCount++;
+////  System.out.println("Start index: " + start + "\n       End: " + end);
+//        if(end-start < 2) return;
+////  printArray(array);
+//
+//        int mid = (start+end)/2;
+//
+//        mergeSort(array, start, mid);
+//        mergeSort(array, mid, end);
+//        merge(array, start, mid, end);
+//        }
+//
+//public static void merge(int[] array, int start, int mid, int end) {
+//// the mid point is my length for array 1 and the end-mid is my length for array 2.  I'll need to compare these
+////  element to element when merging together.  Break when the condition is met, otherwise, continue in the loop
+//
+////   if the left 'mid' element is smaller than the rigt beginning element, we are done!
+//        if (array[mid - 1] >= array[mid]) return;
+//
+//        int i = start;
+//        int j = mid;
+//        int tempindex = 0;
+//
+//        int[] tempArray = new int[end - start];
+//        while ((i < mid) && (j < end)) {
+//        iterateCount++;
+//        printArray(tempArray);
+//        System.out.println("Array-i: " + array[i] + "\nArray-j: " +array[j] );
+//        tempArray[tempindex++] = array[i] >= array[j] ? array[i++] : array[j++];
+//        printArray(tempArray);
+//        }
+//        System.arraycopy(array, i, array, start + tempindex, mid-i);
+//        printArray(tempArray);
+//
+//        System.arraycopy(tempArray, 0, array, start, tempindex);
+//        printArray(array);
+//
+//        }

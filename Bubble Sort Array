@@ -1,0 +1,46 @@
+//// BUBBLE SORT the Time complexity is O(n^2) if 2 loops, embedded, this is n*n complexity
+//
+//        int[] intArray = {20, 35, -15, 7, 55, -1, 22, 1,18, 99, 99, 27, -8, 45, 17}; //, 29, 93, -88, -17};
+//                printArray(intArray);
+//
+//                int stepcounter=0;
+//                int arrayLength = intArray.length;
+//                while(arrayLength>1) {
+//                for (int i = 0; i < arrayLength-1; i++) // i cannot get to the last element.
+//        {            stepcounter++;
+//
+//        if (intArray[i] > intArray[i+1]) // (ascending order Sort)
+//        {
+//        swap(intArray, i, i+1);
+//        }
+//        }
+//        arrayLength += -1; // reduce loop by 1
+//        }
+//        printArray(intArray);
+//        System.out.println("Array Elements:" + intArray.length + ", Sort steps: " + stepcounter);
+//
+//        }
+//public static void swap(int[] array, int i, int j){
+//        if(i==j)
+//        {
+//        return;
+//        }
+//        System.out.println("i:"+ i + " :" + array[i] + ", j:" + j + " :" + array[j]);
+//        int temp = array[i];
+//        array[i] = array[j]; // array element j is now assigned to array element i
+//        array[j] = temp;     // array element i is now assigned to array element j (they are properly swapped
+//        }
+//
+//public static void printArray(int[] array){
+//        System.out.print("Array Element (");
+//        for(int i=0; i<array.length; i++){
+//        if(i==array.length-1){
+//        System.out.print(array[i]);
+//        } else{
+//        System.out.print(array[i] + ", ");
+//
+//        }
+//        }
+//        System.out.println(")");
+//        }
+//        }

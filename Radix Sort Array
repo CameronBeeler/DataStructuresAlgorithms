@@ -1,0 +1,94 @@
+//
+////  radix = 10
+////  width = 4
+////  length = 6
+////  traverse each value in the array to sort order the element from right to left
+////  Provide appropriate logic for considering duplicate values and not allowing them to 'skip'.
+////  First, select the 10's position, then compare all of the elements & sort.
+////  -Then progress to the next 10's position.  Rinse/repeat.
+////      Loop through the 10's width, index 0 to width, ascending to sort with each element 10's,
+////      Loop through the elements, index 5 to 0, descending to walk all of the array elements, subord to 10's comparison
+////  To retain sort order of duplicates, we must place numbers in the array in the
+////  -same order that we traverse the array.
+//
+//public static void radixSort(int[] inputArray, int width, int radix){
+//
+//        //this funciton will create countingArray, tempArray and then will re-assign inputArray for each digit sequence
+//        for (int i = 0; i<width; i++){
+//        singleStableCountingSort(inputArray, i, radix);
+//        }
+//
+//        }
+//
+//public static void singleStableCountingSort(int[] inputArray, int i, int radix) {
+//        int[] countingArray = new int[radix];
+//        int[] tempArray = new int[inputArray.length];
+//        // Set the counting array information
+//        for(int var:inputArray){
+//        ++countingArray[(getDigit(i, var, radix))];
+//        }
+//
+//        int incrementor=0;
+//        int index=0;
+//        for (int map:countingArray){
+//        incrementor+=map;
+//        countingArray[index++] = incrementor;
+//        }
+//        // Set the temp array with the proper sequence of elements
+//        for(int idx= (inputArray.length-1); idx>=0; idx--){
+//        tempArray[--countingArray[getDigit(i, inputArray[idx], radix)]] = inputArray[idx];
+//        }
+//        index=0;
+//        for (int val:tempArray){
+//        inputArray[index] = tempArray[index++];
+//        }
+//        }
+//
+//public static int getDigit(int position, int value, int radix){
+//        return ((value/(int)Math.pow(10,position))%radix);
+//        }
+//
+
+
+/*          String[] strArray = {"bcdef", "dbaqc", "abcde", "omadd", "bbbbb"};
+
+
+    public static void radixSort(String[] strArray, int width, int radix){
+//this funciton will create countingArray, tempArray and then will re-assign inputArray for each digit sequence
+        for (int i = 0; i<width; i++){
+            singleStableCountingSort(strArray, i, radix);
+        }
+
+    }
+
+    public static void singleStableCountingSort(String[] strArray, int i, int radix) {
+        int[] countingArray = new int[radix];
+        String[] tempArray = new String[strArray.length];
+// Set the counting array information
+        for(String var:strArray){
+            ++countingArray[(getIndex(i, var))];
+        }
+
+        int incrementor=0;
+        int index=0;
+        for (int map:countingArray){
+            incrementor+=map;
+            countingArray[index++] = incrementor;
+        }
+// Set the temp array with the proper sequence of elements
+        for(int idx= (strArray.length-1); idx>=0; idx--){
+            tempArray[--countingArray[getIndex(i, strArray[idx])]] = strArray[idx];
+        }
+
+        index=0;
+        for (String val:tempArray){
+            strArray[index] = tempArray[index++];
+        }
+    }
+
+    public static int getIndex(int position, String value){
+        return (value.charAt(position)-'a');
+    }
+
+
+ */

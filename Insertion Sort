@@ -1,0 +1,72 @@
+//  The outer loop will be the controller for the array elements from the 0 index,
+//  & the total comparable out to the max#
+//  The inner loop will be the comparison of the
+// rightmost (temporary) value
+// to the leftmost value(s),
+// retaining the key value
+//  moving the leftmost values to the right (shifting)
+//  and inserting the keyValue into the appropriate inner element 'slot'
+
+
+//  All of our arrays are 0 indexed, so 2 elements is index 0, 1.
+//  For loop beginning with 2 elements and working our way to all of our elements (incrementing from 2,to totalLength-1)
+//  Consider our elements with a 5 element array...
+//  If we were on Element 3, index #2...
+//  We'd begin by keeping a copy of -15, comparing -15 to Array[1],
+//  Assigning 35 to Array[2],
+//  and then comparing -15 with Array[0],
+//  then Assigning Array[0], 20 to Array[1].
+//  There are two conditions that are mutually <OR> able to end the sequence.
+//  First, If we are at the 0 index, then the Array[0] = keyValue
+//  Second, if the next Array[n] < keyValue, then the Array[n+1] = KeyValue
+//        boolean changeOccurred = false;
+//                for(int sortedArrayElements = 1;sortedArrayElements<intArray.length; sortedArrayElements++){
+//        // sortedArrayElements accounts for elements {0,1}
+//        changeOccurred = false;
+//
+//        int keyValue = intArray[sortedArrayElements];
+//        for(int insertionIndex=sortedArrayElements; insertionIndex>0; insertionIndex--){
+//        if(intArray[insertionIndex-1]>keyValue){
+//        intArray[insertionIndex] = intArray[insertionIndex-1];
+//        changeOccurred = true;
+//        stepcounter++;
+//        if(insertionIndex==1){
+//        intArray[insertionIndex-1]=keyValue;
+//        printArray(intArray);
+//        }
+//
+//        }else {
+//        if (changeOccurred)
+//        {
+//        intArray[insertionIndex] = keyValue;
+//        printArray(intArray);
+//        stepcounter++;
+//        break;
+//        }
+//        }
+////  if a change occurred, and we are at he last element/idx, then assign the 0 index with the keyValue
+////  if a change occurred and the most recent comparison rendered the -1 idx to be lesser than the keyValue,
+////  then set the current idx to the keyValue...
+//        }
+//
+//        }
+
+
+
+//  RECURSION INSERTION SORT
+//public static void recurseInsert(int[] intArray, int numitems){
+//        if(numitems<2) return;
+//
+//        System.out.println("numItems " + numitems);
+//        recurseInsert(intArray, numitems-1);
+//        int newElement = intArray[numitems-1];
+//
+//        int i;
+//        System.out.println(("Iteration with number of items = "+numitems));
+//        for (i = numitems-1; i > 0 && intArray[i - 1] > newElement; i--) {
+//        System.out.println("Array["+i+"]::Array["+(i-1)+"]\t\t" + intArray[i] +"::" + intArray[i-1]);
+//        intArray[i] = intArray[i - 1];
+//        }
+//        intArray[i] = newElement;
+//        printArray(intArray);
+//        }

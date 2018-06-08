@@ -1,0 +1,18 @@
+//int arrayidxLarge; // arrayelemLarge;
+//
+//        for(int unsortedelements = intArray.length;unsortedelements>1;unsortedelements--){
+//        arrayidxLarge = 0;
+//        // arrayelemLarge=intArray[0];
+//
+//        for(int index=1; index<unsortedelements; index++){
+//        stepcounter++;
+//
+//        if(intArray[arrayidxLarge]<intArray[index]){
+////                    arrayelemLarge = intArray[index];
+//        arrayidxLarge = index;
+//        }
+//        }
+//        swap(intArray, arrayidxLarge, unsortedelements-1);
+//
+//
+//        }

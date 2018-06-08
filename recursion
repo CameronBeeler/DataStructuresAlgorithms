@@ -1,0 +1,47 @@
+//boolean keepGoing = true;
+//        int nFact = 1, factorial = 0;
+//        while (keepGoing) {
+//
+//        System.out.println("Please enter an n! integer amount (-1 to quit) ");
+//        nFact = scan.nextInt();
+//
+//        if (nFact == -1){
+//        keepGoing = false;
+//        break;
+//        }
+//        if (nFact <= 0){
+//        System.out.println("Moron, try again!");
+//        continue;
+//        }
+//        factorial = interativeFactorial(nFact);
+//        System.out.println("Iteration: n = " + nFact + ", n! = " + factorial);
+//        factorial = 0;
+//        factorial = recursiveFactorial(nFact);
+//        System.out.println("Recursion: n = " + nFact + ", n! = " + factorial);
+//
+//        nFact = 1;
+//        }
+//        }
+//// n! == N*(N-1)! until N = 1
+//static public int recursiveFactorial(int num){
+//        if (num == 0){return 1;}
+//        return num * recursiveFactorial(num-1);
+//
+//        }
+//
+//static public int interativeFactorial(int num){
+//        if(num<0)return -1;
+//
+//        if (num == 0) { // for recursion, this is the "base case" or Break case, that stops the recursion.
+//        // Recursion must have one of these!
+//        // each recursion is placed on a call stack, LIFO, the call stack can be called a recursion stack
+//        return 1;
+//        }
+//
+//        int factorial = 1;
+//        for (int i = num; i > 1; i--) {
+//        factorial *= i;
+//        }
+//        return factorial;
+//        }
+//        }

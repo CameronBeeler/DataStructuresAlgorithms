@@ -1,0 +1,39 @@
+//public static void quickSort(int[] array, int start, int end) {
+//
+//        if (end - start < 2) return;
+//
+//        int pivotIndex = partition(array, start, end); // this is the method that will identify the correct array position for the pivot value
+//        quickSort(array, start, pivotIndex);
+//        quickSort(array, pivotIndex + 1, end);
+//
+//        }
+//
+//public static int partition(int[] array, int start, int end) {
+////  this is using the first element of the relative array
+//        int pivot = array[start];
+//        int i = start;
+//        int j = end;
+//        System.out.println("");
+//        System.out.println("Pivot=" + pivot);
+//        printArray(array, start, end);
+//
+//        while (i < j) {
+//        while (i < j && array[--j] >= pivot)
+//        ; // i'm going to count down with j until I find the value that is smaller than the pivot or until i & j crossover
+//        if (i < j) {
+//        System.out.println("L - (L,R) indexes: (" + i + ", " + j + ") - [L,R] Array values = [" + array[i] + ", " + array[j] + "]" +
+//        "New Array["+ i+ "] = " + array[j]  );
+//        array[i] = array[j];
+//        }
+//        while ((i < j) && array[++i] <= pivot)
+//        ; // i'm going to count up with i until I find a value where array-i is greater than array-j or until i&j crossover
+//        if (i < j) {
+//        System.out.println("R - (L,R) indexes: (" + i + ", " + j + ") - [L,R] Array values = [" + array[i] + ", " + array[j] + "]" +
+//        "New Array["+ j + "] = " + array[i]  );
+//        array[j] = array[i];
+//        }
+//        }
+//        array[j] = pivot;
+//        printArray(array, start, end);
+//        return j;
+//        }

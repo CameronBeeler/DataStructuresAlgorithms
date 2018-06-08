@@ -1,0 +1,133 @@
+//public static void main(String[] args) {
+//        // Begin at Array element 0.  It is the "sorted" element
+//        // Compare the second array element idx 1, and compare the a-e 0.  Swap if needed.
+//        // Compare the next right element to the left element, and keep comparing until we acquire the element
+//        // that is smaller, or the left end of the array, then (insert) swap
+//        // as we compare and find the right element to be > the left element, we move the left element to the
+//        // right and compare again
+////                         0   1    2  3   4   5   6  7  8   9  10  11  12  13  14  15  16   17   18
+//        int[] intArray = {20, 35, -15, 7, 55, -1, 22, 1,18, 99, 99, 27, -8, 45, 17, 29, 93, -88, -17};
+//        int[] intArray2 = {20, 35, -15, 7, 55, -1, 22, 1,18, 99, 99, 27, -8, 45, 17, 29, 93, -88, -17};
+//
+//        int stepcounter=0;
+//        printArray(intArray);
+////  Shell sorts begin with gap-compare-swap, incrementally progressing to the end of the array,
+////  then decrementing the interval/gap size by 1, and repeating,
+////  then, finishing with the basic Insertion sort...
+////  Still doing the multi-compare, shifting values up, and moving to position 0 or first larger value to assign...,
+////  but comparing at gap intervals.
+////  First, Identify the length of the array, divide by 2, & use that as the 'gap' of the first sequence of shell sorts
+////  knuth - (3^k - 1)/2
+////  gap - is the beginning point of the compare.  Increment +1 through the array, up to the end.
+////  for int gap = (3^k-1)/2; gap ???;gap - how do we reduce gap, and when?  It should change after every full
+////  interation...what is the starting 'k'?  Down to 1, which is insertion...
+////  for int i=gap; i<length; i = i+1;) - outer loop for shell sort
+//
+//        int arrayLength = intArray.length;
+//        for(int gap = arrayLength/2; gap >= 1; gap /= 2) // Decrementing gap down to 1
+//        {
+//        for(int index = gap; index<arrayLength; index++) // loop to walk up the chain element comparison
+//        {
+//        int temp = intArray[index]; // Don't assign this to an element until we've found the farthest left change...
+//        boolean changed = false, headElement=false;
+//        int Tidx=0;
+//        for(Tidx=index; Tidx>=gap; Tidx = Tidx-gap ){
+//
+//        if(temp > intArray[Tidx-gap]){
+//        if(changed){
+//        stepcounter++;
+//        intArray[Tidx] = temp;
+//        printArray(intArray);
+//        }
+//        break;
+//        }
+//
+//        intArray[Tidx] = intArray[Tidx-gap]; // moved the larger # to the right...
+//        stepcounter++;
+//        printArray(intArray);
+//        changed = true;
+//        if((Tidx-gap) == 0){ // if the compare element is the head element then set it here...
+//        intArray[Tidx-gap] = temp; // moved the larger # to the right...
+//        stepcounter++;
+//        printArray(intArray);
+//        break;
+//        }else if ((Tidx-gap)< gap){
+//        intArray[Tidx-gap] = temp; // moved the larger # to the right...
+//        stepcounter++;
+//        printArray(intArray);
+//        }
+//        }
+//
+//        changed = false;
+//        }
+//        }
+//        System.out.println("Array Elements:" + intArray.length + ", Sort steps: " + stepcounter);
+//        System.out.println("\nBRAND NEW INSERTION ONLY ARRAY");
+//        printCount = 0;
+//        stepcounter=0;
+//        boolean changeOccurred = false;
+//        printArray(intArray2);
+//
+//        for(int sortedArrayElements = 1;sortedArrayElements<intArray2.length; sortedArrayElements++){
+//        // sortedArrayElements accounts for elements {0,1}
+//        changeOccurred = false;
+//
+//        int keyValue = intArray2[sortedArrayElements];
+//        for(int insertionIndex=sortedArrayElements; insertionIndex>0; insertionIndex--){
+//        if(intArray2[insertionIndex-1]>keyValue){
+//        intArray2[insertionIndex] = intArray2[insertionIndex-1];
+//        printArray(intArray2);
+//        changeOccurred = true;
+//        stepcounter++;
+//        if(insertionIndex==1){
+//        intArray2[insertionIndex-1]=keyValue;
+//        printArray(intArray2);
+//        }
+//        }else
+//        {
+//        if (changeOccurred)
+//        {
+//        intArray2[insertionIndex] = keyValue;
+//        printArray(intArray2);
+//        stepcounter++;
+//        break;
+//        }
+//        }
+//        //  if a change occurred, and we are at he last element/idx, then assign the 0 index with the keyValue
+//        //  if a change occurred and the most recent comparison rendered the -1 idx to be lesser than the keyValue,
+//        //  then set the current idx to the keyValue...
+//        }
+//
+//        }
+//
+//        printArray(intArray);
+//        System.out.println("Array2 Elements:" + intArray2.length + ", Sort steps: " + stepcounter);
+//
+//        }
+//
+//
+//public static void swap(int[] array, int i, int j){
+//        if(i==j)
+//        {
+//        return;
+//        }
+////        System.out.println("SWAP - i:"+ i + " :" + array[i] + ", j:" + j + " :" + array[j]);
+//        int temp = array[i];
+//        array[i] = array[j]; // array element j is now assigned to array element i
+//        array[j] = temp;     // array element i is now assigned to array element j (they are properly swapped
+//        printArray(array);
+//        }
+//
+//public static void printArray(int[] array){
+//        System.out.print("Array Element (");
+//        for(int i=0; i<array.length; i++){
+//        if(i==array.length-1){
+//        System.out.print(array[i]);
+//        } else{
+//        System.out.print(array[i] + ", ");
+//
+//        }
+//        }
+//        System.out.println(") - print count#" + printCount++);
+//        }
+//
